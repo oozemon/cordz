@@ -75,6 +75,7 @@ public class AudioSoundPlayer {
         AudioTrack audioTrack;
 
         public PlayThread(int note){
+
             this.note = note;
         }
 

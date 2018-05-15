@@ -5,13 +5,14 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.logging.Handler;
+import android.os.Handler;
 import java.util.logging.LogRecord;
 
 public class PianoView extends View {
@@ -139,20 +140,10 @@ public class PianoView extends View {
 
     private Handler handler = new Handler() {
         @Override
-        public void publish(LogRecord record) {
-
+        public void handleMessage(Message msg){
+            invalidate();
         }
-
-        @Override
-        public void flush() {
-
-        }
-
-        @Override
-        public void close() throws SecurityException {
-
-        }
-    }
+    };
 }
 
 
